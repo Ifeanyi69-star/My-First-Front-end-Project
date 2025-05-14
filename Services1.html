@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICES</title>
+    <link rel="stylesheet" href="Response.css">
+
+    <style>
+
+      body{
+                  position: relative;
+                  background-color: transparent;
+              }
+              body::before{
+                  content:'';
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background-image: url(images/photo-1677682693087-711e24efaa69.avif);
+                  background-size: cover;
+                  filter: blur(10px);
+                  z-index: -1;
+              }
+          
+      .services-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      
+      .service-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      
+      .service-card {
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: calc(33.33% - 20px);
+        opacity: 0.8; cursor: pointer;
+        transition: width 2s, height 3s;
+            transition-timing-function: ease-in-out;
+      }
+
+      .service-card:hover{opacity: 10;
+        width: 500px;
+        height: 300px;
+      }
+      
+      .service-card h3 {
+        margin-top: 0;
+      }
+      
+      .service-card button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .service-card button:hover {
+        background-color: #555;
+      }
+
+      h1, h2{
+         font-style: italic;
+        font-size: 50px;}
+
+      
+      
+      #joy{
+        background-image: url(images/Photo1.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #joy1{
+        background-image: url(images/Photo2.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #joy2{
+        background-image: url(images/Manipedi3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+      }
+      
+       
+      #joy3{
+        background-image: url(images/Manipedi2.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+      }
+
+      #joy4{
+        background-image: url(images/Photo4.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+      }
+
+      #joy5{
+        background-image: url(images/istockphoto-2197004462-612x612.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #ccc;
+      }
+
+
+ 
+strong{
+text-align:right;
+}
+/* Default text style: white text with black outline */
+.service-card h3,
+.service-card p,
+.service-card strong,
+.service-card button {
+  color: white;
+  text-shadow: 
+    -1px -1px 0 black,  
+     1px -1px 0 black,  
+    -1px  1px 0 black,  
+     1px  1px 0 black;
+  transition: text-shadow 0.4s ease;
+}
+
+/* On hover: change only the outline color to gray */
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover strong,
+.service-card:hover button {
+  text-shadow: 
+  -1px -1px 0 darkgray,  
+     1px -1px 0 darkgray,  
+    -1px  1px 0 darkgray,  
+     1px  1px 0 darkgray;
+}
+
+
+footer {
+              background-color: #333;
+              color: white;
+              text-align: center;
+              padding: 15px;
+              font-size: 0.9em;
+            }
+        
+            footer a {
+              color: #00aaff;
+              text-decoration: none;
+              margin: 0 8px;
+            }
+        
+            footer a:hover {
+              text-decoration: underline;
+              color: darkblue;
+            }
+
+        </style>
+
+
+</head>
+<body>
+    <header>
+ 
+      <div id="mysideNav" class="sidenav">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       <a href="project.html">Home</a>
+       <a href="About Us.html">About us</a>
+       <a href="Contact Us.html">Contact Us</a>
+       <a href="login.html">Login</a>
+       <a href="Our Services.html">Services</a>
+       <a href="Updates.html">Updates</a>
+       <a href="Schedules and Personnels.html">Schedules/Personnels</a>
+     </div>
+ 
+     <span style="font-size: 30px; cursor: pointer; color:white;" onclick ="openNav()">&#9776;</span>
+     <div class="logo">
+      <img src="images/Screenshot_20250417-015610-removebg-preview (3).png" alt="" style="width:300px; height: 220px;">
+     </div> 
+     </header>
+      <main class="services-main">
+        <h2>Our Services</h2>
+        <div class="service-card-container">
+
+          <div class="service-card"  id="joy"  style=" border:solid black;">
+            <h3>Swedish Massage</h3>
+            <p>Relax and rejuvenate with our classic Swedish massage. Perfect for stress relief, muscle tension, and overall wellness. Experience calm like never before.</p>
+           <strong> <p>Price:#50000</p></strong>
+            <button class="book-btn" data-service="Swedish Massage">Book Now</button>
+          </div >
+
+          <div class="service-card" id="joy1" style="border:solid black;">
+            <h3>Deep Tissue Massage</h3>
+            <p>Target deeper layers of muscles with our deep tissue massage. Ideal for chronic aches, injury recovery, and persistent tension relief.</p>
+           <strong> <p>Price:#70000</p></strong>
+            <button class="book-btn" data-service="Deep Tissue Massage">Book Now</button>
+          </div>
+
+          <div class="service-card" id="joy2"  style="border:solid black;">
+            <h3>Shiatsu Massage</h3>
+            <p>Restore your body’s energy balance with a traditional Shiatsu massage. Based on acupressure techniques, it promotes healing and relaxation.</p>
+            <strong><p>Price:#60000</p></strong>
+            <button class="book-btn" data-service="Shiatsu Massage">Book Now</button>
+          </div>
+
+          <div class="service-card"  id="joy3"  style="border:solid black;">
+            <h3>Manicure & Pedicure</h3>
+            <p>Treat your hands and feet to a relaxing session of care and beauty. We offer luxurious nail treatments and skin care for a polished look.</p>
+            <strong><p>Price:#20000</p></strong>
+            <button class="book-btn" data-service="Manicure & Pedicure">Book Now</button>
+          </div>
+        
+          <div class="service-card"   id="joy4"  style="border:solid black;">
+            <h3>Skincare Treatments</h3>
+            <p>Revitalize your skin with our professional skincare services, including facials, peels, and hydration therapy for glowing results.</p>
+            <strong><p>Price:#50000</p></strong>
+            <button class="book-btn" data-service="Skincare Treatments">Book Now</button>
+          </div>
+        
+          <div class="service-card"  id="joy5" style="border:solid black;">
+            <h3>Spa Packages</h3>
+            <p>Indulge in a full-body spa experience. From aromatic steam rooms to body wraps and scrubs, escape into ultimate relaxation.</p>
+            <strong><p>Price:#80000</p></strong>
+            <button class="book-btn" data-service="SpaPackages">Book Now</button>
+          </div>
+        
+        </div>
+      </main>
+      <footer>
+        &copy; 2025 Joy's House Of Bliss❤️❤️ | 
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a>|
+        <a href="project.html">Home</a>
+      </footer>
+    
+
+
+
+      <script>
+        // for the book button
+        document.addEventListener('DOMContentLoaded', function () {
+          const buttons = document.querySelectorAll('.book-btn');
+      
+          buttons.forEach(button => {
+            button.addEventListener('click', function () {
+              const service = this.getAttribute('data-service');
+              alert(`${service} has been booked by your client.`);
+            });
+          });
+        });
+
+
+      //  for the slidebar
+        
+       function openNav(){
+        document.getElementById("mysideNav").style.width="250px";
+       
+        }
+        function closeNav(){
+        document.getElementById("mysideNav").style.width="0";
+      
+        }
+
+
+        
+      // Save audio state before page unload
+window.addEventListener('beforeunload', function() {
+  const audio = document.getElementById('bg-music');
+  localStorage.setItem('audioCurrentTime', audio.currentTime);
+  localStorage.setItem('audioIsPlaying', !audio.paused);
+});
+
+// On page load
+window.addEventListener('load', function() {
+  const audio = document.getElementById('bg-music');
+  const savedTime = localStorage.getItem('audioCurrentTime');
+  const wasPlaying = localStorage.getItem('audioIsPlaying') === 'true';
+  
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play().catch(e => console.log("Autoplay prevented:", e));
+  }
+});
+      </script>
+
+   <audio id="bg-music" src="images/background-music-soft-piano-334995.mp3" autoplay loop></audio>
+     
+
+
+
+
+</body>
+</html>
+
+
+
+
+ 

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UPDATES- Joy's House Of Bliss</title>
+  <link rel="icon" href="images/logo.png" />
+  <link rel="stylesheet" href="Response.css">
+   <style>
+    
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fdfaff;
+  color: #5a4a6c;
+}
+
+ header{
+  background-color: pink;
+  padding: 80px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+} 
+
+
+
+header h1 {
+  font-size: 24px;
+  color: maroon;
+}
+
+/* Page Title */
+ .page-title {
+  text-align: center;
+  font-size: 30px;
+  margin: 30px 0 10px;
+  color:maroon;
+} 
+
+/* Updates Grid, to make the articles in a section align in a box like manner in the same line */
+ .updates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+/* for the shadow of the boxes */
+.update-card {
+  background-color:pink;
+  border-left: 6px solid maroon;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.update-card:hover {
+  transform: translateY(-5px);
+}
+
+.update-card h3 {
+  margin-top: 0;
+  color: maroon;
+}
+
+.update-card .date {
+  font-size: 0.9em;
+  color: maroon;
+  margin-bottom: 10px;
+} 
+
+
+
+
+/* Footer */ 
+ footer {
+  background-color: pink;
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #5e476b;
+}   
+footer a:hover {
+  text-decoration: underline;
+  color: maroon;
+  }
+  </style>
+</head>
+<body>
+  <header>
+      <div id="mysideNav" class="sidenav">
+       <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+       <a href="project.html">Home</a>
+       <a href="About Us.html">About us</a>
+       <a href="Contact Us.html">Contact Us</a>
+       <a href="login.html">Login</a>
+       <a href="Our Services.html">Services</a>
+       <a href="Updates.html">Updates</a>
+       <a href="Schedules and Personnels.html">Schedules/Personnels</a>
+     </div>
+     <span style="font-size: 30px; cursor: pointer; color:maroon;" onclick ="openNav()">&#9776;</span>
+
+     <div class="logo">
+      <img src="images/Screenshot_20250417-015610-removebg-preview (3).png" alt="" style="width:300px; height: 220px;">
+     </div> 
+  </header>
+
+  <main>
+    <h2 class="page-title">Latest Updates & News</h2>
+
+    <section class="updates-grid">
+      <article class="update-card">
+        <h3>🌿 New Skincare Package</h3>
+        <p class="date">April 2025</p>
+        <p>Introducing our lavender-infused facial and hydration treatment. Feel fresh, look radiant!</p>
+      </article>
+
+      <article class="update-card">
+        <h3>💅 Manicure & Pedicure Combo</h3>
+        <p class="date">March 2025</p>
+        <p>Book our new Blissful Hands & Feet combo at a 20% discount this month only.</p>
+      </article>
+
+      <article class="update-card">
+        <h3>🎉 Easter's Day Special</h3>
+        <p class="date">April 2025</p>
+        <p>Get a free gift card with every spa day booked before Easter. Limited offer!</p>
+      </article>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Joy's House Of Bliss❤️❤️ | 
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms of Service</a>|
+    <a href="project.html">Home</a>
+  </footer>
+
+
+
+ 
+<script>
+
+ //  for the slidebar
+        
+       function openNav(){
+        document.getElementById("mysideNav").style.width="250px";
+       
+        }
+        function closeNav(){
+        document.getElementById("mysideNav").style.width="0";
+      
+        }
+
+
+ // Save audio state before page unload
+window.addEventListener('beforeunload', function() {
+  const audio = document.getElementById('bg-music');
+  localStorage.setItem('audioCurrentTime', audio.currentTime);
+  localStorage.setItem('audioIsPlaying', !audio.paused);
+});
+
+// On page load
+window.addEventListener('load', function() {
+  const audio = document.getElementById('bg-music');
+  const savedTime = localStorage.getItem('audioCurrentTime');
+  const wasPlaying = localStorage.getItem('audioIsPlaying') === 'true';
+  
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play().catch(e => console.log("Autoplay prevented:", e));
+  }
+});
+      </script>
+
+   <audio id="bg-music" src="images/background-music-soft-piano-334995.mp3" autoplay loop></audio>
+     
+</body>
+</html>

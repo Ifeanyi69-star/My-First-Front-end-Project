@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>THERAPIST AMAKA</title>
+    <link rel="stylesheet" href="Response.css">
+    <style>
+       body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #fcb69f);
+      margin: 0;
+      padding: 0;
+      color: #f4f4f4;
+    }
+
+    h1 {
+      color: #ffd700;
+      text-shadow: 2px 2px 6px #000;
+      font-size: 2.5rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .content-container {
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.08);
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0,0.3);
+    }
+
+    p {
+      line-height: 1.9;
+      font-size: 1.1rem;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 15px;
+      border-radius: 10px;
+      transition: 0.4s ease;
+      color: #f8f8f8;
+    }
+
+    p:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #ffd700;
+    }
+
+    center img {
+      border-radius: 15px;
+      transition: transform 0.4s ease, border 0.4s ease;
+    }
+
+    center img:hover {
+      transform: scale(1.05);
+      border: 4px solid #ffd700;
+    }
+
+
+        footer {
+          margin-top: 50px;
+          text-align: center;
+          padding: 15px;
+          background-color: #2f3542;
+          color: white;
+          font-size: 0.9em;
+        }
+    
+        footer a {
+          color: #1e90ff;
+          text-decoration: none;
+          margin: 0 10px;
+        }
+    
+        footer a:hover {
+          text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="mysideNav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="project.html">Home</a>
+         <a href="About Us.html">About us</a>
+         <a href="Contact Us.html">Contact Us</a>
+         <a href="login.html">Login</a>
+         <a href="Our Services.html">Services</a>
+         <a href="Updates.html">Updates</a>
+         <a href="Schedules and Personnels.html">Schedules/Personnels</a>
+       </div>
+       <span style="font-size: 30px; cursor: pointer; color:white;" onclick ="openNav()">&#9776;</span>
+  
+       <div class="logo">
+        <img src="images/Screenshot_20250417-015610-removebg-preview (3).png" alt="" style="width:300px; height: 220px;">
+       </div> 
+    </header>
+
+    <center><img src="images/therapist1.avif" alt="Therapist Amaka"  width="500px" height="400px"></center>
+    <center> <h1>THERAPIST AMAKA</h1></center>
+    <div class="content-container">
+      <p>
+        Amaka is an expert in Deep Tissue therapy, known for her firm yet highly intuitive technique. 
+        Her sessions are especially effective for relieving chronic muscle tension, sports-related soreness, and long-term postural stress. 
+        With a deep understanding of muscle anatomy, she tailors each massage to target knots and deep layers of tissue, making her therapy both restorative and energizing.
+      </p>
+    
+      <p>
+        She is originally from Awka, Anambra State, Nigeria. Raised in a family of healthcare workers, Amaka developed a passion for physical wellness and natural healing from a young age. 
+        After studying physical therapy in university, she trained in advanced massage techniques both in Lagos and abroad, refining her skills to meet international wellness standards.
+      </p>
+    
+      <p>
+        With over 10 years of hands-on experience, Amaka has worked with athletes, office professionals, and individuals recovering from physical injuries. 
+        Her calm presence and professional confidence give her clients reassurance and comfort, turning each session into a personalized healing journey.
+      </p>
+    
+      <p>
+        Outside the spa, Amaka is an advocate for women’s wellness and body positivity. She volunteers in rural outreach programs, teaching posture correction and stress-relief stretches to local communities. 
+        In her free time, she enjoys early morning jogging, reading anatomy books, and preparing healthy, traditional Igbo meals.
+      </p>
+    </div>
+    <footer>
+        &copy; 2025 Joy's House Of Bliss❤️❤️ | 
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a>|
+        <a href="project.html">Home</a>
+      </footer>
+    
+
+    <script>
+
+        //  for the slidebar
+                
+         //  for the slidebar
+        
+     function openNav(){
+        document.getElementById("mysideNav").style.width="250px";
+       
+        }
+        function closeNav(){
+        document.getElementById("mysideNav").style.width="0";
+      
+        }
+
+
+       // Save audio state before page unload
+window.addEventListener('beforeunload', function() {
+  const audio = document.getElementById('bg-music');
+  localStorage.setItem('audioCurrentTime', audio.currentTime);
+  localStorage.setItem('audioIsPlaying', !audio.paused);
+});
+
+// On page load
+window.addEventListener('load', function() {
+  const audio = document.getElementById('bg-music');
+  const savedTime = localStorage.getItem('audioCurrentTime');
+  const wasPlaying = localStorage.getItem('audioIsPlaying') === 'true';
+  
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play().catch(e => console.log("Autoplay prevented:", e));
+  }
+});
+      </script>
+
+   <audio id="bg-music" src="images/background-music-soft-piano-334995.mp3" autoplay loop></audio>
+     
+         
+</body>
+</html>

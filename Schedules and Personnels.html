@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Schedule & Personnels</title>
+  <link rel="stylesheet" href="Response.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, black, #fcb69f);
+      margin: 0;
+      padding: 0;
+    }
+
+    h1 {
+      font-size: 36px;
+      text-align: center;
+      padding: 20px;
+      color: #6a0572;
+      background-color: rgba(255, 255, 255, 0.85);
+      margin: 30px auto; 
+      width: 80%;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    table {
+      border-collapse: collapse;
+      margin: auto;
+      width: 90%;
+      background-color: #fff;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.25);
+    }
+
+    th, td {
+      padding: 14px;
+      text-align: center;
+      font-style: italic;
+      border: 1px solid #ccc;
+    }
+
+    th {
+      background-color: #541675;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #ffe0f0;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #dff9fb;
+    }
+
+  td:hover {
+  background-color: #c8d6e5;
+  color: maroon;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+td:nth-child(2):hover {
+  color: darkblue;
+}
+/* for the therapists links */
+td a{
+text-decoration: none;
+}
+
+
+    footer {
+      margin-top: 50px;
+      text-align: center;
+      padding: 15px;
+      background-color: #2f3542;
+      color: white;
+      font-size: 0.9em;
+    }
+
+    footer a {
+      color: #1e90ff;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <header>
+  <div id="mysideNav" class="sidenav">
+   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+   <a href="project.html">Home</a>
+   <a href="About Us.html">About us</a>
+   <a href="Contact Us.html">Contact Us</a>
+   <a href="login.html">Login</a>
+   <a href="Our Services.html">Services</a>
+   <a href="Updates.html">Updates</a>
+   <a href="Schedules and Personnels.html">Schedules/Personnels</a>
+ </div>
+ <span style="font-size: 30px; cursor: pointer; color:white;" onclick ="openNav()">&#9776;</span>
+
+ <div class="logo">
+  <img src="images/Screenshot_20250417-015610-removebg-preview (3).png" alt="" style="width:300px; height: 220px;">
+ </div> 
+</header>
+
+  <h1>Joy's House of Bliss – Session Timetable</h1>
+  <table>
+    <tr>
+      <th>Service</th>
+      <th>Personnel</th>
+      <th>Day</th>
+      <th>Time</th>
+    </tr>
+    <tr><td>Swedish Massage</td><td><a href="Therapist Joy.html">Therapist Joy</a></td><td>Monday</td><td>10:00 AM – 12:00 PM</td></tr>
+
+    <tr><td>Deep Tissue Massage</td><td><a href="Therapist Amaka.html"> Therapist Amaka</a></td><td>Tuesday</td><td>12:00 PM – 2:00 PM</td></tr>
+
+    <tr><td>Shiatsu Massage</td><td><a href="Therapist Rita.html"> Therapist Rita</a></td><td>Wednesday</td><td>1:00 PM – 3:00 PM</td></tr>
+
+    <tr><td>Manicure & Pedicure</td><td><a href="Esthetician Lola.html">Esthetician Lola</a</td><td>Thursday</td><td>11:00 AM – 1:00 PM</td></tr>
+
+    <tr><td>Skincare Treatments</td><td><a href="Therapist Ada.html">Therapist Ada</a></td><td>Friday</td><td>2:00 PM – 4:00 PM</td></tr>
+
+    <tr><td>Spa Packages</td><td><a href="Therapist Joy.html">Therapist Joy</a></td><td>Saturday</td><td>9:00 AM – 12:00 PM</td></tr>
+
+    <tr><td>Sports Massage</td><td><a href="Therapist John.html">Therapist John</a></td><td>Monday</td><td>2:00 PM – 4:00 PM</td></tr>
+
+    <tr><td>Beard and Facial Grooming</td><td><a href="Groomer Alex.html">Groomer Alex</a></td><td>Tuesday</td><td>10:00 AM – 11:30 AM</td></tr>
+
+    <tr><td>Executive Hand & Foot Care</td><td><a href="Groomer Mike.html">Groomer Mike</a></td><td>Wednesday</td><td>11:30 AM – 1:30 PM</td></tr>
+
+    <tr><td>Gentlemen’s Facial</td><td><a href="Therapist Sam.html">Therapist Sam</a></td><td>Thursday</td><td>1:00 PM – 2:30 PM</td></tr>
+
+    <tr><td>Back Detox Treatment</td><td><a href="Therapist Ben.html">Therapist Ben</a></td><td>Friday</td><td>3:00 PM – 5:00 PM</td></tr>
+
+    <tr><td>Full Body Relaxation</td><td><a href="Therapist Daniel.html">Therapist Daniel</a></td><td>Saturday</td><td>4:00 PM – 6:00 PM</td></tr>
+  </table>
+
+  <footer>
+    &copy; 2025 Joy's House Of Bliss❤️❤️ | 
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms of Service</a>|
+    <a href="project.html">Home</a>
+  </footer>
+
+
+  <script>
+            
+    //  for the slidebar
+        
+    function openNav(){
+        document.getElementById("mysideNav").style.width="250px";
+       
+        }
+        function closeNav(){
+        document.getElementById("mysideNav").style.width="0";
+      
+        }
+
+        
+      // Save audio state before page unload
+window.addEventListener('beforeunload', function() {
+  const audio = document.getElementById('bg-music');
+  localStorage.setItem('audioCurrentTime', audio.currentTime);
+  localStorage.setItem('audioIsPlaying', !audio.paused);
+});
+
+// On page load
+window.addEventListener('load', function() {
+  const audio = document.getElementById('bg-music');
+  const savedTime = localStorage.getItem('audioCurrentTime');
+  const wasPlaying = localStorage.getItem('audioIsPlaying') === 'true';
+  
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play().catch(e => console.log("Autoplay prevented:", e));
+  }
+});
+      </script>
+
+   <audio id="bg-music" src="images/background-music-soft-piano-334995.mp3" autoplay loop></audio>
+     
+    
+</body>
+</html>

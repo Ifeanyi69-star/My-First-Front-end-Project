@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Response.css">
+    <title>OUR SERVICES</title>
+    <style> 
+  
+        h1{
+          font-family: monospace;
+          font-family: cursive;
+       
+        } 
+        .image img {
+    opacity: 0.9; 
+    transition: all 0.4s ease;
+    border-radius: 12px;
+    border: none;
+}
+
+/* Hover Effect */
+.image img:hover {
+    opacity: 1;
+    transform: scale(1.05);
+    animation: glowPulse 2s infinite alternate; /* Soft breathing effect */
+}
+
+/* Pulse Animation */
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 10px 3px rgba(173, 216, 230, 0.8);
+    }
+    100% {
+        box-shadow: 0 0 20px 8px rgba(128, 0, 0, 1);
+    }
+}
+
+
+
+footer {
+              background-color: #333;
+              color: white;
+              text-align: center;
+              padding: 15px;
+              font-size: 0.9em;
+            }
+        
+            footer a {
+              color: #00aaff;
+              text-decoration: none;
+              margin: 0 8px;
+            }
+        
+            footer a:hover {
+              text-decoration: underline;
+              color: darkblue;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        
+ 
+            <div id="mysideNav" class="sidenav">
+             <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+             <a href="project.html">Home</a>
+             <a href="About Us.html">About us</a>
+             <a href="Contact Us.html">Contact Us</a>
+             <a href="login.html">Login</a>
+             <a href="Our Services.html">Services</a>
+             <a href="Updates.html">Updates</a>
+             <a href="Schedules and Personnels.html">Schedules/Personnels</a>
+           </div>
+       
+           <span style="font-size: 30px; cursor: pointer; color:black;" onclick ="openNav()">&#9776;</span>
+           
+   <div class="logo">
+    <img src="images/Screenshot_20250417-015610-removebg-preview (3).png" alt="" style="width:200px; height: 150px;">
+   </div> 
+   
+    <div>
+    <input type="text"  name="search" style="padding: 3px; margin-left: 40%; width: 200px; height: 30px; border-radius: 30px; color: black; background-color: whitesmoke; position: absolute; left: -20px;top: 20px; z-index: +1; font-size: 16px; " placeholder="Search🔍">
+   </div>
+
+  
+</header>
+<br>
+<h1>CHOOSE YOUR GENDER👧🏾👦🏾</h1>
+<br>
+<div class="image" >
+<a href="Services1.html"><img src="images/girl1.webp" alt="" style="height:700px; width: 49%; float: left;"></a>
+<a href="Services2.html" ><img src="images/boy1.webp" alt=""style="height:700px; width: 49%;"></a>
+</div>
+
+
+<footer>
+    &copy; 2025 Joy's House Of Bliss❤️❤️ | 
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms of Service</a>|
+    <a href="project.html">Home</a>
+  </footer>
+
+
+
+
+<script>
+        
+     //  for the slidebar 
+        
+     function openNav(){
+        document.getElementById("mysideNav").style.width="250px";
+       
+        }
+        function closeNav(){
+        document.getElementById("mysideNav").style.width="0";
+      
+        }
+
+        
+       // Save audio state before page unload
+window.addEventListener('beforeunload', function() {
+  const audio = document.getElementById('bg-music');
+  localStorage.setItem('audioCurrentTime', audio.currentTime);
+  localStorage.setItem('audioIsPlaying', !audio.paused);
+});
+
+// On page load
+window.addEventListener('load', function() {
+  const audio = document.getElementById('bg-music');
+  const savedTime = localStorage.getItem('audioCurrentTime');
+  const wasPlaying = localStorage.getItem('audioIsPlaying') === 'true';
+  
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play().catch(e => console.log("Autoplay prevented:", e));
+  }
+});
+      </script>
+
+   <audio id="bg-music" src="images/background-music-soft-piano-334995.mp3" autoplay loop></audio>
+     
+</body>                                                                                                                                                                                                                                                                                                                     
+</html>

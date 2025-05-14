@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Response.css">
+    <title>GROOMER MIKE</title>
+    <style>
+       body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #fcb69f);
+      margin: 0;
+      padding: 0;
+      color: #f4f4f4;
+    }
+
+    h1 {
+      color: #ffd700;
+      text-shadow: 2px 2px 6px #000;
+      font-size: 2.5rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .content-container {
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.08);
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      line-height: 1.9;
+      font-size: 1.1rem;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 15px;
+      border-radius: 10px;
+      transition: 0.4s ease;
+      color: #f8f8f8;
+    }
+
+    p:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #ffd700;
+    }
+
+    center img {
+      border-radius: 15px;
+      transition: transform 0.4s ease, border 0.4s ease;
+    }
+
+    center img:hover {
+      transform: scale(1.05);
+      border: 4px solid #ffd700;
+    }
+
+
+        footer {
+          margin-top: 50px;
+          text-align: center;
+          padding: 15px;
+          background-color: #2f3542;
+          color: white;
+          font-size: 0.9em;
+        }
+    
+        footer a {
+          color: #1e90ff;
+          text-decoration: none;
+          margin: 0 10px;
+        }
+    
+        footer a:hover {
+          text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="mysideNav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="project.html">Home</a>
+         <a href="About Us.html">About us</a>
+         <a href="Contact Us.html">Contact Us</a>
+         <a href="login.html">Login</a>
+         <a href="Our Services.html">Services</a>
+         <a href="Updates.html">Updates</a>
+         <a href="Schedules and Personnels.html">Schedules/Personnels</a>
+       </div>
+       <span style="font-size: 30px; cursor: pointer; color:white;" onclick ="openNav()">&#9776;</span>
+  
+       <div class="logo">
+        <img src="images/Screenshot_20250417-015610-removebg-preview (3).png" alt="" style="width:300px; height: 220px;">
+       </div> 
+    </header>
+
+    <center><img src="images/Male2.webp" alt="Groomer Mike"  width="500px" height="400px"></center>
+    <center><h1>GROOMER MIKE</h1></center>
+    <div class="content-container">
+      <p>
+        Mike offers high-end hand and foot care services specifically tailored for men, combining precision with luxury. From executive nail grooming to deep exfoliation and moisturizing treatments, 
+        he ensures every client walks out feeling clean, confident, and completely refreshed. His attention to detail and gentle approach have made him a top choice for business professionals and style-conscious men.
+      </p>
+    
+      <p>
+        Born and raised in Ibadan, Oyo State, Mike grew up in a household where neatness and presentation were highly valued. Influenced by his mother, a seasoned hairdresser, 
+        he developed an early appreciation for personal care and wellness. Despite financial struggles, Mike pushed himself through vocational training in cosmetology 
+        and later specialized in men’s nail and foot care—an area often overlooked in traditional grooming.
+      </p>
+    
+      <p>
+        With over 10 years of experience, Mike has built a solid reputation for professionalism and hygiene. He frequently updates his techniques through international masterclasses and proudly integrates African herbal foot soaks into his treatments. 
+        Clients admire his calm personality, discreet service, and commitment to helping men embrace self-care without stigma.
+      </p>
+    
+      <p>
+        Outside of his studio, Mike enjoys jazz music, cycling around the city, and mentoring young people interested in grooming and spa therapy. 
+        To him, male grooming is not a luxury but a necessity—one that supports mental clarity, body confidence, and personal pride.
+      </p>
+    
+    </div>
+    <footer>
+        &copy; 2025 Joy's House Of Bliss❤️❤️ | 
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a>|
+        <a href="project.html">Home</a>
+      </footer>
+    
+
+    <script>
+
+         //  for the slidebar
+        
+       function openNav(){
+        document.getElementById("mysideNav").style.width="250px";
+       
+        }
+        function closeNav(){
+        document.getElementById("mysideNav").style.width="0";
+      
+        }
+         
+
+         // Save audio state before page unload
+window.addEventListener('beforeunload', function() {
+  const audio = document.getElementById('bg-music');
+  localStorage.setItem('audioCurrentTime', audio.currentTime);
+  localStorage.setItem('audioIsPlaying', !audio.paused);
+});
+
+// On page load
+window.addEventListener('load', function() {
+  const audio = document.getElementById('bg-music');
+  const savedTime = localStorage.getItem('audioCurrentTime');
+  const wasPlaying = localStorage.getItem('audioIsPlaying') === 'true';
+  
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play().catch(e => console.log("Autoplay prevented:", e));
+  }
+});
+      </script>
+
+   <audio id="bg-music" src="images/background-music-soft-piano-334995.mp3" autoplay loop></audio>
+     
+</body>
+</html>

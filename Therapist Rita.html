@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=V, initial-scale=1.0">
+    <link rel="stylesheet" href="Response.css">
+    <title>THERAPIST RITA</title>
+    <style>
+      body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #fcb69f);
+      margin: 0;
+      padding: 0;
+      color: #f4f4f4;
+    }
+
+    h1 {
+      color: #ffd700;
+      text-shadow: 2px 2px 6px #000;
+      font-size: 2.5rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .content-container {
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.08);
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      line-height: 1.9;
+      font-size: 1.1rem;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 15px;
+      border-radius: 10px;
+      transition: 0.4s ease;
+      color: #f8f8f8;
+    }
+
+    p:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #ffd700;
+    }
+
+    center img {
+      border-radius: 15px;
+      transition: transform 0.4s ease, border 0.4s ease;
+    }
+
+    center img:hover {
+      transform: scale(1.05);
+      border: 4px solid #ffd700;
+    }
+
+
+
+   footer {
+          margin-top: 50px;
+          text-align: center;
+          padding: 15px;
+          background-color: #2f3542;
+          color: white;
+          font-size: 0.9em;
+        }
+    
+        footer a {
+          color: #1e90ff;
+          text-decoration: none;
+          margin: 0 10px;
+        }
+    
+        footer a:hover {
+          text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div id="mysideNav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="project.html">Home</a>
+         <a href="About Us.html">About us</a>
+         <a href="Contact Us.html">Contact Us</a>
+         <a href="login.html">Login</a>
+         <a href="Our Services.html">Services</a>
+         <a href="Updates.html">Updates</a>
+         <a href="Schedules and Personnels.html">Schedules/Personnels</a>
+       </div>
+       <span style="font-size: 30px; cursor: pointer; color:white;" onclick ="openNav()">&#9776;</span>
+  
+       <div class="logo">
+        <img src="images/Screenshot_20250417-015610-removebg-preview (3).png" alt="" style="width:300px; height: 220px;">
+       </div> 
+    </header>
+
+    <center><img src="images/therapist2.avif" alt="Therapist Rita" width="500px" height="400px"></center>
+    <center><h1>THERAPIST RITA</h1></center>
+    <div class="content-container">
+<p>
+  Therapist Rita specializes in Shiatsu massage, a traditional Japanese technique that uses finger pressure to improve circulation, reduce tension, and promote emotional harmony. 
+  With over 8 years of hands-on experience, she artfully integrates modern acupressure with ancient Eastern wisdom to help clients release physical blockages and restore inner balance. 
+  Her approach is both holistic and intuitive, often leaving clients with a deep sense of relaxation and rejuvenation.
+</p>
+
+<p>
+  Rita hails from Oshimili South, Asaba in Delta State. Raised in a humble family, she faced financial struggles early in life, but remained driven by a strong desire to bring healing and comfort to others. 
+  Inspired by her grandmother’s herbal remedies and community care, Rita pursued formal training in therapeutic massage and bodywork. 
+  Her background taught her resilience, compassion, and the importance of personalized care, which she brings into every session.
+</p>
+
+<p>
+  Outside her professional work, Rita enjoys quiet meditation, volunteering in wellness outreach programs, and learning about traditional healing from different cultures. 
+  Her clients often praise her for her calming presence, gentle demeanor, and ability to understand both physical pain and emotional stress. 
+  Whether you're seeking relief from chronic discomfort or simply want a moment of peace, a session with Rita is a healing experience you won’t forget.
+</p>
+</div>
+
+    
+    <footer>
+        &copy; 2025 Joy's House Of Bliss❤️❤️ | 
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a>|
+        <a href="project.html">Home</a>
+      </footer>
+    
+
+    <script>
+
+     //  for the slidebar
+        
+       function openNav(){
+        document.getElementById("mysideNav").style.width="250px";
+       
+        }
+        function closeNav(){
+        document.getElementById("mysideNav").style.width="0";
+        }
+
+
+         // Save audio state before page unload
+window.addEventListener('beforeunload', function() {
+  const audio = document.getElementById('bg-music');
+  localStorage.setItem('audioCurrentTime', audio.currentTime);
+  localStorage.setItem('audioIsPlaying', !audio.paused);
+});
+
+// On page load
+window.addEventListener('load', function() {
+  const audio = document.getElementById('bg-music');
+  const savedTime = localStorage.getItem('audioCurrentTime');
+  const wasPlaying = localStorage.getItem('audioIsPlaying') === 'true';
+  
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play().catch(e => console.log("Autoplay prevented:", e));
+  }
+});
+      </script>
+
+   <audio id="bg-music" src="images/background-music-soft-piano-334995.mp3" autoplay loop></audio>
+     
+</body>
+</html>

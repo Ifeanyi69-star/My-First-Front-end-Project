@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SERVICES</title>
+    <link rel="stylesheet" href="Response.css">
+
+    <style>
+
+      body{
+                  position: relative;
+                  background-color: transparent;
+              }
+              body::before{
+                  content:'';
+                  position: fixed;
+                  top: 0;
+                  left: 0;
+                  width: 100%;
+                  height: 100%;
+                  background-image: url(images/men\ Background.avif);
+                  background-size: cover;
+                  filter: blur(10px);
+                  z-index: -1;
+              }
+          
+      .services-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+      
+      .service-card-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      
+      .service-card {
+        background-color: #fff;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: calc(33.33% - 20px);
+        opacity: 0.8; cursor: pointer;
+        transition: width 2s, height 3s;
+            transition-timing-function: ease-in-out;
+      }
+
+      .service-card:hover{opacity: 10;
+        width: 500px;
+        height: 300px;
+      }
+      
+      .service-card h3 {
+        margin-top: 0;
+      }
+      
+      .service-card button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      .service-card button:hover {
+        background-color: #555;
+      }
+
+      h1, h2{
+         font-style: italic;
+        font-size: 50px;}
+
+      
+      
+      #joy{
+        background-image: url(images/SportsMassageForMen.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #joy1{
+        background-image: url(images/Beards\ and\ Facials.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+      #joy2{
+        background-image: url(images/Hand\ and\ Foot\ care.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+      }
+      
+       
+      #joy3{
+        background-image: url(images/Gentleman\ facials.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+       
+      }
+
+      #joy4{
+        background-image: url(images/Back\ Detox\ for\ Men.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+      }
+
+      #joy5{
+        background-image: url(images/Full\ Body\ Relaxation\ Therapy1.avif);
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: #ccc;
+      }
+
+
+   
+strong{
+text-align:right;
+}
+
+.service-card h3,
+.service-card p,
+.service-card strong,
+.service-card button {
+  color: white;
+  text-shadow: 0 0 3px black, 0 0 5px black;
+}
+
+/* On hover: change only the outline color to gold */
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover strong,
+.service-card:hover button {
+  text-shadow: 
+  -1px -1px 0 darkgray,  
+     1px -1px 0 darkgray,  
+    -1px  1px 0 darkgray,  
+     1px  1px 0 darkgray;
+}
+
+
+footer {
+              background-color: #333;
+              color: white;
+              text-align: center;
+              padding: 15px;
+              font-size: 0.9em;
+            }
+        
+            footer a {
+              color: #00aaff;
+              text-decoration: none;
+              margin: 0 8px;
+            }
+        
+            footer a:hover {
+              text-decoration: underline;
+              color: darkblue;
+            }
+            
+
+        </style>
+
+
+</head>
+<body>
+    <header>
+ 
+        <div id="mysideNav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="project.html">Home</a>
+         <a href="About Us.html">About us</a>
+         <a href="Contact Us.html">Contact Us</a>
+         <a href="login.html">Login</a>
+         <a href="Our Services.html">Services</a>
+         <a href="Updates.html">Updates</a>
+         <a href="Schedules and Personnels.html">Schedules/Personnels</a>
+       </div>
+   
+       <span style="font-size: 30px; cursor: pointer; color:white;" onclick ="openNav()">&#9776;</span>
+       <div class="logo">
+        <img src="images/Screenshot_20250417-015610-removebg-preview (3).png" alt="" style="width:300px; height: 220px;">
+       </div> 
+       </header>
+    <main class="services-main">
+        <h2>Our Services</h2>
+        <div class="service-card-container">
+          <div class="service-card" id="joy" style=" border:solid black;">
+            <h3>Sports Massage</h3>
+            <p>Enhance muscle recovery and performance with a deep, focused sports massage. Perfect for active men seeking relief from strains and tightness.</p>
+            <strong><p>Price: #55000</p></strong>
+            <button class="book-btn" data-service="Sports Massage">Book Now</button>
+          </div>
+      
+          <div class="service-card" id="joy1" style=" border:solid black;">
+            <h3>Beard and Facial Grooming</h3>
+            <p>Keep your beard and skin sharp and healthy with specialized grooming, exfoliation, and hydration treatments designed for men.</p>
+            <strong><p>Price: #35000</p></strong>
+            <button class="book-btn" data-service="Beard and Facial Grooming">Book Now</button>
+          </div>
+      
+          <div class="service-card" id="joy2" style="border:solid black;">
+            <h3>Executive Hand and Foot Care</h3>
+            <p>Professional manicure and pedicure tailored for men — clean, neat, and stress-relieving without the frills.</p>
+            <strong><p>Price: #25000</p></strong>
+            <button class="book-btn" data-service="Executive Hand and Foot Care">Book Now</button>
+          </div>
+      
+          <div class="service-card" id="joy3" style=" border:solid black;">
+            <h3>Gentlemen’s Facial</h3>
+            <p>Combat dry skin, razor irritation, and clogged pores with a deep-cleansing facial specially designed for men’s tougher skin.</p>
+            <strong><p>Price: #45000</p></strong>
+            <button class="book-btn" data-service="Gentlemen’s Facial">Book Now</button>
+          </div>
+      
+          <div class="service-card" id="joy4" style="border:solid black;">
+            <h3>Back Detox Treatment</h3>
+            <p>A purifying and exfoliating back treatment to clear congestion, smooth skin, and ease muscular tension — perfect for men with active lifestyles.</p>
+            <strong><p>Price: #50000</p></strong>
+            <button class="book-btn" data-service="Back Detox Treatment">Book Now</button>
+          </div>
+      
+          <div class="service-card" id="joy5" style=" border:solid black;">
+            <h3>Full Body Relaxation Therapy</h3>
+            <p>Recharge your body and mind with a full-body deep relaxation therapy, including aromatherapy tailored to masculine energy and scents.</p>
+            <strong><p>Price: #85000</p></strong>
+            <button class="book-btn" data-service="Full Body Relaxation Therapy">Book Now</button>
+          </div>
+        </div>
+      </main>
+    </main>
+    <footer>
+      &copy; 2025 Joy's House Of Bliss❤️❤️ | 
+      <a href="#">Privacy Policy</a> |
+      <a href="#">Terms of Service</a>|
+      <a href="project.html">Home</a>
+    </footer>
+  
+
+  
+
+
+    <script>
+      // for the book button
+      document.addEventListener('DOMContentLoaded', function () {
+        const buttons = document.querySelectorAll('.book-btn');
+    
+        buttons.forEach(button => {
+          button.addEventListener('click', function () {
+            const service = this.getAttribute('data-service');
+            alert(`${service} has been booked by your client.`);
+          });
+        });
+      });
+
+
+    //  for the slidebar
+        
+    function openNav(){
+        document.getElementById("mysideNav").style.width="250px";
+       
+        }
+        function closeNav(){
+        document.getElementById("mysideNav").style.width="0";
+      
+        }
+
+
+        
+     // Save audio state before page unload
+window.addEventListener('beforeunload', function() {
+  const audio = document.getElementById('bg-music');
+  localStorage.setItem('audioCurrentTime', audio.currentTime);
+  localStorage.setItem('audioIsPlaying', !audio.paused);
+});
+
+// On page load
+window.addEventListener('load', function() {
+  const audio = document.getElementById('bg-music');
+  const savedTime = localStorage.getItem('audioCurrentTime');
+  const wasPlaying = localStorage.getItem('audioIsPlaying') === 'true';
+  
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play().catch(e => console.log("Autoplay prevented:", e));
+  }
+});
+      </script>
+
+   <audio id="bg-music" src="images/background-music-soft-piano-334995.mp3" autoplay loop></audio>
+     
+
+   
+    
+
+
+</body>
+</html>

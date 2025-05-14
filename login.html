@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN FORM</title>
+    <link rel="stylesheet" href="Response.css">
+    <style>
+html, body {
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+
+   body {
+    background-image: url(images/istockphoto-2197004462-612x612.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: Arial, sans-serif;
+        }
+
+
+.loginbox{
+    width: 320px;
+    height: 420;
+    background: grey;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+   border-radius: 20px;
+   border: solid black;
+}
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -15%;
+    left: calc(50%-50px);
+    margin-left: 25%;
+}
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+.loginbox input[type=text],input[type=password]{
+    border: 1px solid gold;
+    border-radius: 8px;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.loginbox input[type=submit]{
+    border: none;
+    outline: none;
+    height: 20px;
+    background: skyblue;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 15px;
+    width: 90px;
+    margin-bottom: auto;
+}
+.loginbox input[type=submit]:hover{
+    cursor: pointer;
+    background: yellow;
+    color: black;
+}
+
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+.loginbox a:hover{
+  color: black;
+  background-color: yellow;
+  border-radius: 20px;
+}
+
+
+footer {
+              background-color: #333;
+              color: white;
+              text-align: center;
+              
+              font-size: 0.9em;
+            }
+        
+            footer a {
+              color: #00aaff;
+              text-decoration: none;
+              margin: 0 8px;
+            }
+        
+            footer a:hover {
+              text-decoration: underline;
+              color: darkblue;
+            }
+    
+      </style>
+    
+</head>
+<body>
+  
+  <header>
+    <div id="mysideNav" class="sidenav">
+     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+     <a href="project.html">Home</a>
+     <a href="About Us.html">About us</a>
+     <a href="Contact Us.html">Contact Us</a>
+     <a href="login.html">Login</a>
+     <a href="Our Services.html">Services</a>
+     <a href="Updates.html">Updates</a>
+     <a href="Schedules and Personnels.html">Schedules/Personnels</a>
+   </div>
+   <span style="font-size: 30px; cursor: pointer; color:white;" onclick ="openNav()">&#9776;</span>
+
+     <div class="logo">
+        <img src="images/Screenshot_20250417-015610-removebg-preview (3).png" alt="" style="width:300px; height: 220px;">
+       </div>
+</header>
+<div class="page-container">
+   <div class="loginbox">
+    <img src="images/WIN_20240730_13_16_24_Pro.jpg" alt="" class="avatar">
+      <h1>Login</h1>
+      <form action="">
+     <p>Username</p>
+     <input type="text" name="Username" placeholder="Enter Username">
+     <input type="password" name="Password" placeholder="Enter Password">
+     <a href=""><input type="Submit" value="Login"></a>
+     <a href="#">Lost Your Password?</a><br>
+     <a href="signup.html">Sign up</a>
+        </form>
+    </div>
+</div>
+
+    <footer>
+        &copy; 2025 Joy's House Of Bliss❤️❤️ | 
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a> |
+        <a href="project.html">Home</a>
+      </footer>
+    
+
+    
+      <script>
+
+         //  for the slidebar
+        
+       function openNav(){
+        document.getElementById("mysideNav").style.width="250px";
+       
+        }
+        function closeNav(){
+        document.getElementById("mysideNav").style.width="0";
+      
+        }
+
+        
+          // Save audio state before page unload
+window.addEventListener('beforeunload', function() {
+  const audio = document.getElementById('bg-music');
+  localStorage.setItem('audioCurrentTime', audio.currentTime);
+  localStorage.setItem('audioIsPlaying', !audio.paused);
+});
+
+// On page load
+window.addEventListener('load', function() {
+  const audio = document.getElementById('bg-music');
+  const savedTime = localStorage.getItem('audioCurrentTime');
+  const wasPlaying = localStorage.getItem('audioIsPlaying') === 'true';
+  
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play().catch(e => console.log("Autoplay prevented:", e));
+  }
+});
+      </script>
+
+   <audio id="bg-music" src="images/background-music-soft-piano-334995.mp3" autoplay loop></audio>
+     
+      
+      
+</body>
+</html>

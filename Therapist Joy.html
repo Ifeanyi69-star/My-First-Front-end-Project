@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Response.css">
+    <title>THERAPIST JOY</title>
+    <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(135deg, #1a1a1a, #fcb69f);
+      margin: 0;
+      padding: 0;
+      color: #f4f4f4;
+    }
+
+    h1 {
+      color: #ffd700;
+      text-shadow: 2px 2px 6px #000;
+      font-size: 2.5rem;
+      animation: fadeIn 1.5s ease-in-out;
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .content-container {
+      max-width: 900px;
+      background: rgba(255, 255, 255, 0.08);
+      margin: 30px auto;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    }
+
+    p {
+      line-height: 1.9;
+      font-size: 1.1rem;
+      margin: 20px 0;
+      background: rgba(255, 255, 255, 0.03);
+      padding: 15px;
+      border-radius: 10px;
+      transition: 0.4s ease;
+      color: #f8f8f8;
+    }
+
+    p:hover {
+      background-color: rgba(255, 255, 255, 0.12);
+      color: #ffd700;
+    }
+
+    center img {
+      border-radius: 15px;
+      transition: transform 0.4s ease, border 0.4s ease;
+    }
+
+    center img:hover {
+      transform: scale(1.05);
+      border: 4px solid #ffd700;
+    }
+
+
+
+        footer {
+          margin-top: 50px;
+          text-align: center;
+          padding: 15px;
+          background-color: #2f3542;
+          color: white;
+          font-size: 0.9em;
+        }
+    
+        footer a {
+          color: #1e90ff;
+          text-decoration: none;
+          margin: 0 10px;
+        }
+    
+        footer a:hover {
+          text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div id="mysideNav" class="sidenav">
+         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+         <a href="project.html">Home</a>
+         <a href="About Us.html">About us</a>
+         <a href="Contact Us.html">Contact Us</a>
+         <a href="login.html">Login</a>
+         <a href="Our Services.html">Services</a>
+         <a href="Updates.html">Updates</a>
+         <a href="Schedules and Personnels.html">Schedules/Personnels</a>
+       </div>
+       <span style="font-size: 30px; cursor: pointer; color:white;" onclick ="openNav()">&#9776;</span>
+  
+       <div class="logo">
+        <img src="images/Screenshot_20250417-015610-removebg-preview (3).png" alt="" style="width:300px; height: 220px;">
+       </div> 
+    </header>
+
+    <center><img src="images/therapist Joy.webp" alt="Therapist Joy"  width="500px" height="400px"></center>
+    <center><h1>THERAPIST JOY</h1></center>
+    <div class="content-container">
+      <p>
+        Joy is a certified massage therapist with over 10 years of experience, specializing in Swedish and holistic massage techniques. 
+        Known for her calming presence and deeply intuitive touch, she helps clients achieve both physical renewal and emotional balance. 
+        Her Swedish massages use gentle, rhythmic strokes that improve circulation, ease muscle tension, and promote deep relaxation, making her a favorite among first-time and long-term spa clients alike.
+      </p>
+    
+      <p>
+        Originally from Uyo, Akwa Ibom State, Nigeria, Joy grew up in a peaceful, nature-filled environment that shaped her quiet strength and spiritual outlook. 
+        Inspired by her mother’s practice of using herbs and massage to soothe family ailments, she pursued formal training in massage therapy, yoga, and natural healing techniques across wellness schools in Nigeria and Ghana.
+      </p>
+    
+      <p>
+        In addition to her massage practice, Joy leads the spa’s full-body wellness experiences. She coordinates treatments that combine Swedish massage, facials, steam therapy, and detox sessions to deliver total mind-body rejuvenation. 
+        Clients value her attentiveness, her serene energy, and the way she tailors each experience to meet their personal stress and wellness needs.
+      </p>
+    
+      <p>
+        Outside of the spa, Joy is a nature lover who enjoys early morning walks, herbal tea blending, and quiet meditation. 
+        She believes true healing happens when the body, mind, and spirit are aligned—and she brings that philosophy into every session she offers. 
+        For many, a session with Joy feels like more than a treatment—it’s a gentle return to inner peace.
+      </p>    </div>
+
+    <footer>
+        &copy; 2025 Joy's House Of Bliss❤️❤️ | 
+        <a href="#">Privacy Policy</a> |
+        <a href="#">Terms of Service</a>|
+        <a href="project.html">Home</a>
+      </footer>
+    
+    <script>
+      //  for the slidebar
+        
+       function openNav(){
+        document.getElementById("mysideNav").style.width="250px";
+       
+        }
+        function closeNav(){
+        document.getElementById("mysideNav").style.width="0";
+      
+        }
+
+
+         // Save audio state before page unload
+window.addEventListener('beforeunload', function() {
+  const audio = document.getElementById('bg-music');
+  localStorage.setItem('audioCurrentTime', audio.currentTime);
+  localStorage.setItem('audioIsPlaying', !audio.paused);
+});
+
+// On page load
+window.addEventListener('load', function() {
+  const audio = document.getElementById('bg-music');
+  const savedTime = localStorage.getItem('audioCurrentTime');
+  const wasPlaying = localStorage.getItem('audioIsPlaying') === 'true';
+  
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play().catch(e => console.log("Autoplay prevented:", e));
+  }
+});
+      </script>
+
+   <audio id="bg-music" src="images/background-music-soft-piano-334995.mp3" autoplay loop></audio>
+     
+   
+        
+</body>
+</html>

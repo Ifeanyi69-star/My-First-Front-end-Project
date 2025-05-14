@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ABOUT US - Joy's House Of Bliss</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="Response.css" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: url(images/istockphoto-136934110-612x612.webp);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background-color: lavenderblush;
+      padding: 50px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      position: relative;
+    }
+
+    .menu-button {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      z-index: 2;
+    }
+
+    .menu-button span {
+      font-size: 30px;
+      cursor: pointer;
+      color: maroon;
+    }
+
+  
+
+    .about-main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    }
+
+    .about-main h2 {
+      font-size: 28px;
+      color: maroon;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .about-main p {
+      font-size: 18px;
+      color: #4b3a4e;
+      text-align: justify;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: lavender;
+      margin-top: 40px;
+      color: #333;
+      font-size: 14px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+      color: maroon;
+    }
+
+    .logo {
+      top: -30px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="menu-button">
+      <span onclick="openNav()">&#9776;</span>
+    </div>
+
+    <div id="mysideNav" class="sidenav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+      <a href="project.html">Home</a>
+      <a href="About Us.html">About us</a>
+      <a href="Contact Us.html">Contact Us</a>
+      <a href="login.html">Login</a>
+      <a href="Our Services.html">Services</a>
+      <a href="Updates.html">Updates</a>
+      <a href="Schedules and Personnels.html">Schedules/Personnels</a>
+    </div>
+
+    <center><h1>About Us</h1></center>
+    <div class="logo">
+      <img src="images/Screenshot_20250417-015610-removebg-preview (3).png" alt="" style="width:300px; height: 220px;">
+    </div>
+  </header>
+
+  <main class="about-main">
+    <h2>Our Story</h2>
+    <p>
+      At <strong>Joy's House of Bliss</strong>, we believe in the transformative power of touch. With a passion for wellness and a heart for healing, our spa was founded to offer a sanctuary for anyone seeking relief, relaxation, and rejuvenation. Our dedicated team of licensed massage therapists and skincare experts combine age-old techniques with modern practices to provide a personalized, luxurious experience. Whether you're visiting us for a calming massage, a refreshing facial, or a pampering spa session, we’re here to help you rediscover balance and inner peace—one moment at a time.
+    </p>
+</main>
+<br>
+<main class="about-main">
+  <h2>THE CEO</h2>
+  <center><img src="images/MY PHOTO.jpg" alt="CEO JOY OKWURUMGBE" width="400px" height="100p-x">
+  <h3>MISS JOY OKWURUMGBE IFEANYICHUKWU</h3></center> <br>
+  <p>
+    Born in the heart of Asaba, Delta State, but proudly hailing from Ute-Erumu in Ika North-East Local Government Area, 
+    Miss Joy Okwurumgbe Ifeanyichukwu is the visionary behind Joy’s House of Bliss. A passionate wellness advocate and a firm believer in 
+    the healing power of rest and beauty, Joy founded the spa with a mission to create a space where physical, emotional, and spiritual calm 
+    could be restored through expertly delivered therapeutic care.
+  </p>
+  
+  <p>
+    With an academic background rooted in International Studies And Diplomacy, Joy blends traditional African skincare wisdom with modern spa innovations. 
+    Her journey began with humble roots and a deep commitment to personal growth and helping others feel whole. She leads her team not just as a 
+    businesswoman, but as a mentor and nurturer who inspires excellence, elegance, and empathy in service delivery.
+  </p>
+  
+  <p>
+    Outside her professional role, Miss Joy is known for her warm personality, her love for natural remedies, and her passion for female empowerment 
+    through skill training and wellness education. Her leadership style reflects compassion, creativity, and a clear vision to redefine self-care 
+    in Nigeria—making luxury wellness experiences accessible, meaningful, and proudly rooted in culture.
+  </p>
+ </main>
+
+  <footer>
+    &copy; 2025 Joy's House Of Bliss ❤️❤️ |
+    <a href="#">Privacy Policy</a> |
+    <a href="#">Terms of Service</a>|
+    <a href="project.html">Home</a>
+  </footer>
+
+  <script>
+    //  for the slidebar
+        
+    function openNav(){
+        document.getElementById("mysideNav").style.width="250px";
+       
+        }
+        function closeNav(){
+        document.getElementById("mysideNav").style.width="0";
+      
+        }
+
+ // Save audio state before page unload
+ window.addEventListener('beforeunload', function() {
+  const audio = document.getElementById('bg-music');
+  localStorage.setItem('audioCurrentTime', audio.currentTime);
+  localStorage.setItem('audioIsPlaying', !audio.paused);
+});
+
+// On page load
+window.addEventListener('load', function() {
+  const audio = document.getElementById('bg-music');
+  const savedTime = localStorage.getItem('audioCurrentTime');
+  const wasPlaying = localStorage.getItem('audioIsPlaying') === 'true';
+  
+  if (savedTime) {
+    audio.currentTime = parseFloat(savedTime);
+  }
+  if (wasPlaying) {
+    audio.play().catch(e => console.log("Autoplay prevented:", e));
+  }
+});
+      </script>
+
+   <audio id="bg-music" src="images/background-music-soft-piano-334995.mp3" autoplay loop></audio>
+     
+</body>
+</html>
